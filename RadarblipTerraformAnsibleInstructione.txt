@@ -15,7 +15,6 @@ https://www.endava.com/en/blog/Engineering/2019/11-Things-I-wish-I-knew-before-w
 # Secret Access Key: XXXXXXXXXXXXXXXXXXXXXXXXXX
 # Default region: us-east-2
 
-
 # Virtual Box:
 # Create a Local VM of Ubuntu to host the Terraform/Ansible Automation tools.
 # Download and install VirtualBox https://www.virtualbox.org/
@@ -33,9 +32,6 @@ sudo chmod 755 /usr/local/terraform
 sudo terraform -install-autocomplete
 
 sudo mkdir terraform-demo && cd $_
-
-
-
 
 Install AWS CLI:
 sudo apt install awscli
