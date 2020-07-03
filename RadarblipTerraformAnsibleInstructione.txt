@@ -1,0 +1,65 @@
+## Other useful Terraform tools
+# Terratest
+https://github.com/gruntwork-io/terratest
+# Extract variables from main.tf -extract hcl vars -scratch relax tv
+https://pypi.org/project/scratchrelaxtv/
+# Using modules
+https://www.endava.com/en/blog/Engineering/2019/11-Things-I-wish-I-knew-before-working-with-Terraform-I
+# Ansible Tuts
+
+
+
+
+## Infrastructions for RADARblip in AWS
+
+# Pre-requisites:
+# An AWS account 
+# Record/store the following keys someplace safe. (typically ~/.ssh)
+# Access Key ID: XXXXXXXXXXXXX
+# Secret Access Key: XXXXXXXXXXXXXXXXXXXXXXXXXX
+# Default region: us-east-2
+
+
+# Virtual Box:
+# Create a Local VM of Ubuntu to host the Terraform/Ansible Automation tools.
+# Download and install VirtualBox https://www.virtualbox.org/
+# Create a VM using Ubuntu.
+# Login into the VM
+# Open a terminal
+
+# Terraform install:
+sudo wget https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip
+sudo unzip terraform_0.12.28_linux_amd64.zip
+sudo echo $PATH
+# make sure /usr/local/bin is in the PATH
+sudo mv ~/Downloads/terraform /usr/local/bin/terraform
+sudo chmod 755 /usr/local/terraform
+sudo terraform -install-autocomplete
+
+sudo mkdir terraform-demo && cd $_
+
+
+
+
+Install AWS CLI:
+sudo apt install awscli
+-or-
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+aws configure
+# this will place your aws creds in ~/.aws/credentials
+# the aws executable is stored in /usr/local/bin/
+ssh-keygen -t rsa -f ~/.ssh/radarblip
+chmod 400 ~/.ssh/radarblip*
+
+# Create Radarblip Server in AWS:
+
+sudo terraform init
+sudo terraform apply
+
+# login/connect to the Ubuntu radarblip server
+# download radarblip demo files 
+git clone https://github.com/surfd4wg/radarblip.git
+
