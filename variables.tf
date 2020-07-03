@@ -5,15 +5,15 @@ variable "network" {
 }
 
 variable "private_key_path" {
-  default = ~/.ssh/radarblip 
+  default = ~/.ssh/xxxxxxxxx 
 }
 variable "public_key_path" {
-  default = ~/.ssh/radarblip.pub
+  default = ~/.ssh/xxxxxxxxx.pub
 }
 
 variable "aws_region" {
   description = "AWS region to launch servers."
-  default     = "us-west-2"
+  default     = "us-east-2"
 }
 
 # Ubuntu Precise 20.04 LTS (x64)
